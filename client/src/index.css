@@ -1,0 +1,149 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todos, .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App > * {
+  margin: 10px;
+}
+
+.todos > * {
+  margin: 10px;
+  background-color: rgb(48, 51, 51);
+  border-radius: 20px;
+}
+
+.todo {
+  padding: 10px;
+  display: flex;
+}
+
+.todo > * {
+  margin: 15px;
+}
+
+.checkbox {
+  height: 22px;
+  width: 22px;
+  background-color: rgb(206, 201, 201);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.todo.is-complete .checkbox {
+  background-color: red;
+  text-decoration: line-through;
+}
+
+.todo.is-complete .text {
+  text-decoration: line-through;
+}
+
+.delete-todo {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addPopup {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  background-color: rgb(32, 49, 65);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid rgb(201, 44, 44);
+  box-shadow: 0px 0px 500px 500px rgb(56, 56, 73);
+}
+
+.popup>* {
+  margin: 5px;
+}
+
+.closePopup {
+  position: relative;
+  cursor: pointer;
+  top: -10px;
+  left: 50%;
+  background-color: red;
+  color: black;
+  padding: 5px;
+  border-radius: 40%;
+}
+
+.popup input {
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+  background-color: rgb(216, 187, 187);
+}
+
+.popup .button {
+  cursor: pointer;
+  background-color: rgb(124, 5, 51);
+  border-radius: 20px;
+  padding: 5px;
+  width: 100px;
+}
+
+.edit {
+  cursor: pointer;
+}
+
+.edit-nav {
+  padding: 20px;
+  background-color: rgb(28, 28, 56);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-nav > * {
+  margin: 5px;
+}
+
+.edit-nav > div {
+  position: relative;
+  left: 50%;
+}
+
+button {
+  background-color: yellow;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
